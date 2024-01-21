@@ -3,7 +3,7 @@ namespace Task1.Features.WebRequest
     using UnityEngine;
 
     /// <summary>
-    /// Кнопка отправки запроса на сервер.
+    /// РљРЅРѕРїРєР° РѕС‚РїСЂР°РІРєРё Р·Р°РїСЂРѕСЃР° РЅР° СЃРµСЂРІРµСЂ.
     /// </summary>
     public class SendRequestButton : AbstractButton
     {

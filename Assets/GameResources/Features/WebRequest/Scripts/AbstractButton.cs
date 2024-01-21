@@ -4,7 +4,7 @@ namespace Task1.Features.WebRequest
     using UnityEngine.UI;
 
     /// <summary>
-    /// Контроллер кнопки.
+    /// РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРЅРѕРїРєРё.
     /// </summary>
     [RequireComponent(typeof(Button))]
     public abstract class AbstractButton : MonoBehaviour

@@ -4,7 +4,7 @@ namespace Task1.Features.WebRequest
     using UnityEngine.UI;
 
     /// <summary>
-    /// Текстовое отображение данных
+    /// РўРµРєСЃС‚РѕРІРѕРµ РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ РґР°РЅРЅС‹С…
     /// </summary>
     [RequireComponent(typeof(Text))]
     public sealed class RequestDataTextView : MonoBehaviour

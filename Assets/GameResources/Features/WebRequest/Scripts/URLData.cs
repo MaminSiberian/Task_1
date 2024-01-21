@@ -3,7 +3,7 @@ namespace Task1.Features.WebRequest
     using UnityEngine;
 
     /// <summary>
-    /// —Ò˚ÎÍ‡.
+   /// –°—Å—ã–ª–∫–∞.
     /// </summary>
     [CreateAssetMenu(menuName = "Task1/WebRequest/New URL Data", fileName = "URL Data")]
     public sealed class URLData : ScriptableObject

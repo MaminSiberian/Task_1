@@ -11,40 +11,68 @@ namespace Task1.Features.WebRequest
     public sealed class WebRequestHandler : MonoBehaviour
     {
         /// <summary>
-        /// Данные.
+        /// Текст.
         /// </summary>
-        public string Data
+        public string TextData
         {
-            get => _data;
+            get => _textData;
             private set
             {
-                _data = value;
-                onDataChangedEvent();
+                _textData = value;
+                onTextDataGetEvent();
             }
         }
-        
+
         /// <summary>
-        /// Данные изменены.
+        /// Изображение.
         /// </summary>
-        public event Action onDataChangedEvent = delegate { };
+        public Texture2D PictureData
+        {
+            get => _pictureData;
+            private set
+            {
+                _pictureData = value;
+                onPictureDataGetEvent();
+            }
+        }
+
+        /// <summary>
+        /// Текст получен.
+        /// </summary>
+        public event Action onTextDataGetEvent = delegate { };
+
+        /// <summary>
+        /// Изображение получено.
+        /// </summary>
+        public event Action onPictureDataGetEvent = delegate { };
 
         [SerializeField]
-        private URLData URL = default;
+        private URLData _textURL = default;        
+        
+        [SerializeField]
+        private URLData _pictureURL = default;
 
-        private string _data = default;
+        private string _textData = default;
+        private Texture2D _pictureData = default;
         private Coroutine _loadingRoutine = default;
         private UnityWebRequest _webRequest = default;
+        private DownloadHandlerTexture _downloadHandlerTexture = default;
 
         /// <summary>
-        /// Загружает данные с сервера.
+        /// Загружает текст с сервера.
         /// </summary>
-        public void LoadData() => StartCoroutine(GetDataRoutine());
+        public void LoadText() => StartCoroutine(GetTextRoutine());
 
-        private IEnumerator GetDataRoutine()
+        /// <summary>
+        /// Загружает изображение с сервера.
+        /// </summary>
+        public void LoadPicture() => StartCoroutine(GetPictureRoutine());
+
+        private IEnumerator GetTextRoutine()
         {
             Debug.Log("Loading...");
 
-            using (_webRequest = UnityWebRequest.Get(URL.Url))
+            using (_webRequest = UnityWebRequest.Get(_textURL.Url))
             {
                 _loadingRoutine = StartCoroutine(ShowProgress(_webRequest));
 
@@ -59,9 +87,32 @@ namespace Task1.Features.WebRequest
                 {
                     if (_webRequest.downloadHandler.text != null)
                     {
-                       Data = _webRequest.downloadHandler.text;
+                       TextData = _webRequest.downloadHandler.text;
                     }
                     Debug.Log(_webRequest.downloadHandler.text);
+                }
+            }
+        }
+
+        private IEnumerator GetPictureRoutine()
+        {
+            Debug.Log("Loading...");
+
+            using (_webRequest = UnityWebRequestTexture.GetTexture(_pictureURL.Url))
+            {
+                _loadingRoutine = StartCoroutine(ShowProgress(_webRequest));
+
+                yield return _webRequest.SendWebRequest();
+                StopCoroutine(_loadingRoutine);
+
+                if (_webRequest.isNetworkError || _webRequest.isHttpError)
+                {
+                    Debug.Log(_webRequest.error);
+                }
+                else
+                {
+                    _downloadHandlerTexture = (DownloadHandlerTexture)_webRequest.downloadHandler;
+                    PictureData = _downloadHandlerTexture.texture;
                 }
             }
         }

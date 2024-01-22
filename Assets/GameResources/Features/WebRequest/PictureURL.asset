@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a2562317c4bf4042bd34139a5b9665f, type: 3}
-  m_Name: Test file URL Data
+  m_Name: PictureURL
   m_EditorClassIdentifier: 
-  _url: ftp://guest:pwd@37.128.204.89/testfile.txt
+  _url: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Weizenbier.jpg/303px-Weizenbier.jpg

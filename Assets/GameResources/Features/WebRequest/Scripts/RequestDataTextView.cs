@@ -17,11 +17,11 @@ namespace Task1.Features.WebRequest
         private void Awake()
         {
             _text = GetComponent<Text>();
-            webRequestHandler.onDataChangedEvent += OnDataChanged;
+            webRequestHandler.onTextDataGetEvent += OnDataChanged;
         }
 
-        private void OnDestroy() => webRequestHandler.onDataChangedEvent -= OnDataChanged;
+        private void OnDestroy() => webRequestHandler.onTextDataGetEvent -= OnDataChanged;
 
-        private void OnDataChanged() => _text.text = webRequestHandler.Data;
+        private void OnDataChanged() => _text.text = webRequestHandler.TextData;
     }
 }

@@ -4,7 +4,7 @@ namespace Task1.Features.WebRequest
     using UnityEngine.UI;
 
     /// <summary>
-    /// Спрайтовое отображение данных
+    /// РЎРїСЂР°Р№С‚РѕРІРѕРµ РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ РґР°РЅРЅС‹С…
     /// </summary>
     [RequireComponent(typeof(Image))]
     public sealed class RequestDataImageView : MonoBehaviour

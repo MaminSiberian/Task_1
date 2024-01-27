@@ -4,7 +4,7 @@ namespace Task1.Features.SerializedData
     using UnityEngine;
 
     /// <summary>
-    /// Скрипт, сохраняющий введенные данные
+    /// РЎРєСЂРёРїС‚, СЃРѕС…СЂР°РЅСЏСЋС‰РёР№ РІРІРµРґРµРЅРЅС‹Рµ РґР°РЅРЅС‹Рµ
     /// </summary>
     public sealed class JsonCharacterSerializer : MonoBehaviour
     {
@@ -20,7 +20,7 @@ namespace Task1.Features.SerializedData
         private string _path = default;
 
         /// <summary>
-        /// Сохраняет данные в файл
+        /// РЎРѕС…СЂР°РЅСЏРµС‚ РґР°РЅРЅС‹Рµ РІ С„Р°Р№Р»
         /// </summary>
         public void SaveData()
         {
@@ -44,7 +44,7 @@ namespace Task1.Features.SerializedData
         }
 
         /// <summary>
-        /// Загружает данные из файла
+        /// Р—Р°РіСЂСѓР¶Р°РµС‚ РґР°РЅРЅС‹Рµ РёР· С„Р°Р№Р»Р°
         /// </summary>
         public void LoadData()
         {

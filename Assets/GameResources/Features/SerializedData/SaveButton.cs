@@ -4,7 +4,7 @@ namespace Task1.Features.SerializedData
     using Task1.Features.WebRequest;
 
     /// <summary>
-    /// Кнопка сохранения данные
+    /// РљРЅРѕРїРєР° СЃРѕС…СЂР°РЅРµРЅРёСЏ РґР°РЅРЅС‹С…
     /// </summary>
     public sealed class SaveButton : AbstractButton
     {

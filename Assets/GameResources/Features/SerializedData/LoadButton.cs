@@ -4,7 +4,7 @@ namespace Task1.Features.SerializedData
     using Task1.Features.WebRequest;
 
     /// <summary>
-    /// Кнопка загрузки данных
+    /// РљРЅРѕРїРєР° Р·Р°РіСЂСѓР·РєРё РґР°РЅРЅС‹С…
     /// </summary>
     public class LoadButton : AbstractButton
     {

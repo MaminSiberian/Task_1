@@ -3,7 +3,7 @@ namespace Task1.Features.SerializedData
     using System;
 
     /// <summary>
-    /// Данные
+    /// Р”Р°РЅРЅС‹Рµ
     /// </summary>
     [Serializable]
     public class CharacterData

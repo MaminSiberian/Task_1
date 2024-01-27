@@ -4,7 +4,7 @@ namespace Task1.Features.SerializedData
     using UnityEngine;
 
     /// <summary>
-    /// Скрипт, сохраняющий введенные данные
+    /// Скрипт загрузки и сохранения введенных данных
     /// </summary>
     public sealed class JsonCharacterSerializer : MonoBehaviour
     {
